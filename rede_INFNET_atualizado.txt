@@ -1,0 +1,33 @@
+Rafiki,25,Rio de Janeiro,RJ,,Carlos,Angelo,Leonardo,Beatriz
+Olivia,22,São Paulo,SP,,Rafiki
+Beatriz,30,Belo Horizonte,MG,,Rafiki
+Angelo,28,Curitiba,PR,,Rafiki
+Leonardo,29,Campinas,SP,Mateus,Rafiki
+João,25,Rio de Janeiro,RJ,Marcos
+Ana,22,São Paulo,SP,Fernanda
+Carlos,30,Belo Horizonte,MG,Caio,Rafiki
+Fernanda,28,Curitiba,PR,Ana
+Marcos,27,Porto Alegre,RS,Carlos
+Clara,26,Brasília,DF,Fernanda
+Lívia,24,São Paulo,SP,Marcos
+Lucas,31,Salvador,BA,Fernando
+Fernando,29,Fortaleza,CE,Aline
+Aline,23,Florianópolis,SC,Caio
+Caio,27,Curitiba,PR,Aline
+Sofia,21,Campinas,SP,Fernanda
+Rafaela,22,Recife,PE,Clara
+Mateus,32,Rio de Janeiro,RJ,Caio
+Tiago,28,Brasília,DF,Mateus
+Paulo,33,,RN,Lucas
+Juliana,25,São Paulo,SP,Marcos
+Pedro,26,Belo Horizonte,MG,Aline
+Amanda,24,Porto Alegre,RS,Caio
+Bruno,30,Cuiabá,MT,Mateus
+Carla,29,Salvador,BA,Lucas
+Gabriela,27,Fortaleza,CE,Carla
+Thiago,31,São Paulo,SP,Amanda
+Renata,23,Curitiba,PR,Fernando
+Camila,28,Niterói,RJ,Juliana
+Felipe,27,Brasília,DF,Carla
+Mariana,30,Porto Alegre,RS,Fernando
+Daniel,25,Rio de Janeiro,RJ,Amanda
