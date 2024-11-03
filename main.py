@@ -248,3 +248,6 @@ def main():
     print("\n")
 
 main()
+
+
+# Achar jeito melhor para lidar com anomalias no arquivo base_inicial.txt
