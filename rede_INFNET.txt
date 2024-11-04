@@ -3,32 +3,32 @@ Olivia,22,São Paulo,SP,
 Beatriz,30,Belo Horizonte,MG,
 Angelo,28,Curitiba,PR,
 Leonardo,27,Porto Alegre,RS,
-João,25,Rio de Janeiro,RJ,Marcos,Ana,Carlos
+João,25,Rio de Janeiro,RJ,Ana,Marcos,Carlos
 Ana,22,São Paulo,SP,Fernanda,João
-Carlos,30,Belo Horizonte,MG,Caio,Marcos,João
+Carlos,30,Belo Horizonte,MG,Marcos,João,Caio
 Fernanda,28,Curitiba,PR,Ana
-Marcos,27,Porto Alegre,RS,Carlos,João
+Marcos,27,Porto Alegre,RS,João,Carlos
 Clara,26,Brasília,DF,Fernanda,Lívia
 Lívia,24,São Paulo,SP,Marcos,Lucas,Clara
-Lucas,31,Salvador,BA,Fernando,Lívia
+Lucas,31,Salvador,BA,Lívia,Fernando
 Fernando,29,Fortaleza,CE,Aline,Lucas
 Aline,23,Florianópolis,SC,Caio,Fernando,Clara
 Caio,27,Curitiba,PR,Aline,Clara
 Sofia,21,Campinas,SP,Fernanda,Rafaela
-Rafaela,22,Recife,PE,Clara,Sofia
-Mateus,32,Rio de Janeiro,RJ,Caio,Fernando,João
-Tiago,28,Brasília,DF,Mateus,Aline,Lívia
-Paulo,33,,RN,Lucas,Fernanda,Tiago
-Juliana,25,São Paulo,SP,Marcos,Rafaela,Sofia
-Pedro,26,Belo Horizonte,MG,Aline,João
-Amanda,24,Porto Alegre,RS,Caio,Pedro,Lívia
-Bruno,30,Cuiabá,MT,Mateus,Marcos,Ana
+Rafaela,22,Recife,PE,Sofia,Clara
+Mateus,32,Rio de Janeiro,RJ,João,Caio,Fernando
+Tiago,28,Brasília,DF,Mateus,Lívia,Aline
+Paulo,33,Cidade Desconhecida,RN,Fernanda,Lucas,Tiago
+Juliana,25,São Paulo,SP,Rafaela,Sofia,Marcos
+Pedro,26,Belo Horizonte,MG,João,Aline
+Amanda,24,Porto Alegre,RS,Pedro,Caio,Lívia
+Bruno,30,Cuiabá,MT,Ana,Mateus,Marcos
 Carla,29,Salvador,BA,Lucas,Fernando,Tiago
-Gabriela,27,Fortaleza,CE,Carla,Rafaela,Aline
-Thiago,31,São Paulo,SP,Amanda,Clara,Lucas,João
-Renata,23,Curitiba,PR,Fernando,Clara,Sofia
-Leonardo,29,Campinas,SP,Mateus,Caio,Renata
-Camila,28,Niterói,RJ,Juliana,Lucas,Caio,Bruno
-Felipe,27,Brasília,DF,Carla,Renata
+Gabriela,27,Fortaleza,CE,Rafaela,Carla,Aline
+Thiago,31,São Paulo,SP,João,Amanda,Lucas,Clara
+Renata,23,Curitiba,PR,Sofia,Fernando,Clara
+Leonardo,29,Campinas,SP,Renata,Mateus,Caio
+Camila,28,Niterói,RJ,Bruno,Caio,Lucas,Juliana
+Felipe,27,Brasília,DF,Renata,Carla
 Mariana,30,Porto Alegre,RS,Fernando,Felipe,Lívia
-Daniel,25,Rio de Janeiro,RJ,Amanda,Paulo,Camila
+Daniel,25,Rio de Janeiro,RJ,Paulo,Amanda,Camila

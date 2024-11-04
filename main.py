@@ -52,23 +52,18 @@ with open(arquivo_base, 'r', encoding='utf-8') as file:
             perfis_validos.append(perfil)
 
 # 6. Concatenando dados ⭐
-todos_perfis = perfis_validos.copy()
-for perfil in perfis:
-    if perfil not in todos_perfis:
-        todos_perfis.append({
-            "nome": perfil["nome"],
-            "idade": perfil["idade"],
-            "localização": perfil["localização"],
-            "amigos": set(perfil.get("amigos", []))
-        })
-
 with open('rede_INFNET.txt', 'w', encoding='utf-8') as file:
-    for perfil in todos_perfis:
-        nome = perfil.get("nome", "Desconhecido")
+    for perfil in perfis_validos:
+        nome = perfil.get("nome")
         idade = perfil.get("idade", "N/A")
         cidade, estado = perfil["localização"]
-        amigos_str = ','.join(perfil.get("amigos", []))
-        file.write(f"{nome},{idade},{cidade},{estado},{amigos_str}\n")
+        amigos = perfil.get("amigos", set())
+        
+        nome = nome if nome else "Nome Desconhecido"
+        cidade = cidade if cidade else "Cidade Desconhecida"
+        estado = estado if estado else "Estado Desconhecido"
+        
+        file.write(f"{nome},{idade},{cidade},{estado},{','.join(amigos)}\n")
 
 # 7. Adicionando Amigos ⭐
 usuarios_dict = {
@@ -138,6 +133,7 @@ def remover_amigo(usuario, amigo):
     if usuario in usuarios_dict:
         if amigo in usuarios_dict[usuario]["amigos"]:
             usuarios_dict[usuario]["amigos"].remove(amigo)
+            usuarios_dict[amigo]["amigos"].remove(usuario)
             print(f"{amigo} foi removido da lista de amigos de {usuario}.")
         else:
             print(f"{amigo} não é amigo de {usuario}.")
@@ -165,18 +161,24 @@ def carregar_usuarios():
             nome = partes[0]
             idade = int(partes[1])
             localizacao = (partes[2], partes[3])
-            amigos = set(partes[4].split(',')) if len(partes) > 4 else set()
+            
+            if len(partes) > 4:
+                amigos = set(partes[4:])
+            else:
+                amigos = set()
+            
             usuarios_dict[nome] = {
                 "idade": idade,
                 "localização": localizacao,
                 "amigos": amigos
             }
+    
     return usuarios_dict
 
 def quantidade_amigos(usuarios_dict):
     for usuario, dados in usuarios_dict.items():
         amigos = dados["amigos"]
-        print(f"{usuario} tem {len(amigos)} amigos.")
+        print(f"{usuario} tem {len(amigos) - 1} amigos.")
 
 # 15. Usuários Mais Populares ⭐⭐⭐
 def usuarios_mais_populares():
@@ -216,6 +218,9 @@ def main():
     adicionar_amigo("Rafiki", "Angelo")
     adicionar_amigo("Rafiki", "Leonardo")
     adicionar_amigo("Rafiki", "Carlos")
+    adicionar_amigo("Rafiki", "Renata")
+    adicionar_amigo("Rafiki", "Daniel")
+    adicionar_amigo("Rafiki", "Felipe")
     print("\n")
     
     print("---------------- Verificando popularidade ---------------- ")
@@ -248,6 +253,3 @@ def main():
     print("\n")
 
 main()
-
-
-# Achar jeito melhor para lidar com anomalias no arquivo base_inicial.txt
