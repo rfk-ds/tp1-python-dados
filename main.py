@@ -196,7 +196,10 @@ def usuarios_mais_populares():
 
 # 16. Lidando com arquivos ⭐⭐
 """
-
+Resposta:
+'with' é importante pois facilita a abertura e fechamento de arquivos,
+de forma que não é necessário se preocupar em fechar o arquivo manualmente,
+evitando assim possíveis erros e problemas de memória.
 """
 def main():
     global usuarios_dict
