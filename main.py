@@ -241,6 +241,45 @@ def csv_para_json():
 
 csv_para_json()
 
+def cadastrar_usuario():
+    decisao = input("Deseja cadastrar um novo usuário? (s/n): ")
+    
+    if decisao.lower() == 's':
+    
+        nome = input("Digite o nome: ")
+        idade = input("Digite a idade: ")
+        cidade = input("Digite a cidade: ")
+        estado = input("Digite o estado: ")
+
+        novo_usuario = {
+            "nome": nome,
+            "idade": idade,
+            "localização": (cidade, estado)
+        }
+
+        try:
+            with open('INFwebNET.json', 'r', encoding='utf-8') as jsonfile:
+                dados_existentes = json.load(jsonfile)
+        except FileNotFoundError:
+            dados_existentes = []
+
+        dados_existentes.append(novo_usuario)
+
+        with open('INFwebNET.json', 'w', encoding='utf-8') as jsonfile:
+            json.dump(dados_existentes, jsonfile, ensure_ascii=False, indent=4)
+
+        print("Novo usuário cadastrado com sucesso!\n")
+        
+        print("Atualizando lista de usuários...\n")
+        global usuarios_dict
+        usuarios_dict = carregar_usuarios()
+        
+        print("Lista de usuários atualizada:\n")
+        listar_usuarios()
+    else:
+        print("Prosseguindo...\n")
+
+
 def main():
     global usuarios_dict
     usuarios_dict = carregar_usuarios()
@@ -249,6 +288,9 @@ def main():
     
     print("---------------- Lista de Usuários ---------------- ")
     listar_usuarios()
+    print("\n")
+    
+    cadastrar_usuario()
     print("\n")
     
     print("---------------- Quantidade de amigos ---------------- ")
