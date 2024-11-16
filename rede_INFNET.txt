@@ -3,32 +3,32 @@ Olivia,22,São Paulo,SP,
 Beatriz,30,Belo Horizonte,MG,
 Angelo,28,Curitiba,PR,
 Leonardo,27,Porto Alegre,RS,
-João,25,Rio de Janeiro,RJ,Marcos,Ana,Carlos
-Ana,22,São Paulo,SP,Fernanda,João
-Carlos,30,Belo Horizonte,MG,Caio,João,Marcos
+João,25,Rio de Janeiro,RJ,Carlos,Marcos,Ana
+Ana,22,São Paulo,SP,João,Fernanda
+Carlos,30,Belo Horizonte,MG,João,Marcos,Caio
 Fernanda,28,Curitiba,PR,Ana
-Marcos,27,Porto Alegre,RS,João,Carlos
-Clara,26,Brasília,DF,Fernanda,Lívia
-Lívia,24,São Paulo,SP,Lucas,Clara,Marcos
+Marcos,27,Porto Alegre,RS,Carlos,João
+Clara,26,Brasília,DF,Lívia,Fernanda
+Lívia,24,São Paulo,SP,Lucas,Marcos,Clara
 Lucas,31,Salvador,BA,Fernando,Lívia
-Fernando,29,Fortaleza,CE,Aline,Lucas
-Aline,23,Florianópolis,SC,Fernando,Clara,Caio
+Fernando,29,Fortaleza,CE,Lucas,Aline
+Aline,23,Florianópolis,SC,Fernando,Caio,Clara
 Caio,27,Curitiba,PR,Aline,Clara
-Sofia,21,Campinas,SP,Fernanda,Rafaela
+Sofia,21,Campinas,SP,Rafaela,Fernanda
 Rafaela,22,Recife,PE,Clara,Sofia
 Mateus,32,Rio de Janeiro,RJ,Fernando,Caio,João
-Tiago,28,Brasília,DF,Mateus,Aline,Lívia
-Paulo,33,Cidade Desconhecida,RN,Fernanda,Lucas,Tiago
-Juliana,25,São Paulo,SP,Sofia,Marcos,Rafaela
-Pedro,26,Belo Horizonte,MG,Aline,João
-Amanda,24,Porto Alegre,RS,Caio,Pedro,Lívia
-Bruno,30,Cuiabá,MT,Mateus,Marcos,Ana
-Carla,29,Salvador,BA,Fernando,Lucas,Tiago
+Tiago,28,Brasília,DF,Aline,Mateus,Lívia
+Paulo,33,Cidade Desconhecida,RN,Lucas,Fernanda,Tiago
+Juliana,25,São Paulo,SP,Marcos,Rafaela,Sofia
+Pedro,26,Belo Horizonte,MG,João,Aline
+Amanda,24,Porto Alegre,RS,Pedro,Caio,Lívia
+Bruno,30,Cuiabá,MT,Marcos,Mateus,Ana
+Carla,29,Salvador,BA,Lucas,Fernando,Tiago
 Gabriela,27,Fortaleza,CE,Aline,Carla,Rafaela
-Thiago,31,São Paulo,SP,Clara,Lucas,Amanda,João
+Thiago,31,São Paulo,SP,Lucas,João,Amanda,Clara
 Renata,23,Curitiba,PR,Fernando,Clara,Sofia
-Leonardo,29,Campinas,SP,Renata,Caio,Mateus
-Camila,28,Niterói,RJ,Caio,Bruno,Juliana,Lucas
+Leonardo,29,Campinas,SP,Renata,Mateus,Caio
+Camila,28,Niterói,RJ,Lucas,Caio,Juliana,Bruno
 Felipe,27,Brasília,DF,Renata,Carla
-Mariana,30,Porto Alegre,RS,Fernando,Felipe,Lívia
-Daniel,25,Rio de Janeiro,RJ,Amanda,Camila,Paulo
+Mariana,30,Porto Alegre,RS,Lívia,Fernando,Felipe
+Daniel,25,Rio de Janeiro,RJ,Camila,Amanda,Paulo

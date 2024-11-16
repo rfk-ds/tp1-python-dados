@@ -1,5 +1,8 @@
 from collections import Counter
 import random
+import csv
+import json
+import pandas as pd
 
 # 1. Aquecendo os motores ⭐
 usuarios = [
@@ -202,8 +205,6 @@ de forma que não é necessário se preocupar em fechar o arquivo manualmente,
 evitando assim possíveis erros e problemas de memória.
 """
 
-import csv
-
 def txt_para_csv():
     with open('rede_INFNET_atualizado.txt', 'r', encoding='utf-8') as file:
         linhas = file.readlines()
@@ -226,8 +227,6 @@ def txt_para_csv():
     print("Dados exportados para INFwebNet.csv com sucesso!")
 
 txt_para_csv()
-
-import json
 
 def csv_para_json():
     with open('INFwebNet.csv', 'r', encoding='utf-8') as csvfile:
@@ -253,7 +252,7 @@ def cadastrar_usuario():
 
         novo_usuario = {
             "nome": nome,
-            "idade": idade,
+            "idade": int(idade),
             "localização": (cidade, estado)
         }
 
@@ -278,6 +277,13 @@ def cadastrar_usuario():
         listar_usuarios()
     else:
         print("Prosseguindo...\n")
+
+def calcular_media_idade():
+    df = pd.read_json('INFwebNET.json')
+
+    media_idade = df['Idade'].mean()
+    print(f"A média de idade dos INFNETianos é: {media_idade:.0f} anos")
+
 
 
 def main():
@@ -335,6 +341,10 @@ def main():
     
     print("---------------- Usuários mais populares ---------------- ")
     usuarios_mais_populares()
+    print("\n")
+    
+    print("---------------- Média de idade dos usuários ---------------- ")
+    calcular_media_idade()
     print("\n")
 
 main()
