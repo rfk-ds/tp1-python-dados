@@ -1,0 +1,200 @@
+[
+    {
+        "Nome": "Rafiki",
+        "Idade": "25",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Olivia",
+        "Idade": "22",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Beatriz",
+        "Idade": "30",
+        "Cidade": "Belo Horizonte",
+        "Estado": "MG"
+    },
+    {
+        "Nome": "Angelo",
+        "Idade": "28",
+        "Cidade": "Curitiba",
+        "Estado": "PR"
+    },
+    {
+        "Nome": "Leonardo",
+        "Idade": "29",
+        "Cidade": "Campinas",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "João",
+        "Idade": "25",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Ana",
+        "Idade": "22",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Carlos",
+        "Idade": "30",
+        "Cidade": "Belo Horizonte",
+        "Estado": "MG"
+    },
+    {
+        "Nome": "Fernanda",
+        "Idade": "28",
+        "Cidade": "Curitiba",
+        "Estado": "PR"
+    },
+    {
+        "Nome": "Marcos",
+        "Idade": "27",
+        "Cidade": "Porto Alegre",
+        "Estado": "RS"
+    },
+    {
+        "Nome": "Clara",
+        "Idade": "26",
+        "Cidade": "Brasília",
+        "Estado": "DF"
+    },
+    {
+        "Nome": "Lívia",
+        "Idade": "24",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Lucas",
+        "Idade": "31",
+        "Cidade": "Salvador",
+        "Estado": "BA"
+    },
+    {
+        "Nome": "Fernando",
+        "Idade": "29",
+        "Cidade": "Fortaleza",
+        "Estado": "CE"
+    },
+    {
+        "Nome": "Aline",
+        "Idade": "23",
+        "Cidade": "Florianópolis",
+        "Estado": "SC"
+    },
+    {
+        "Nome": "Caio",
+        "Idade": "27",
+        "Cidade": "Curitiba",
+        "Estado": "PR"
+    },
+    {
+        "Nome": "Sofia",
+        "Idade": "21",
+        "Cidade": "Campinas",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Rafaela",
+        "Idade": "22",
+        "Cidade": "Recife",
+        "Estado": "PE"
+    },
+    {
+        "Nome": "Mateus",
+        "Idade": "32",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Tiago",
+        "Idade": "28",
+        "Cidade": "Brasília",
+        "Estado": "DF"
+    },
+    {
+        "Nome": "Paulo",
+        "Idade": "33",
+        "Cidade": "Cidade Desconhecida",
+        "Estado": "RN"
+    },
+    {
+        "Nome": "Juliana",
+        "Idade": "25",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Pedro",
+        "Idade": "26",
+        "Cidade": "Belo Horizonte",
+        "Estado": "MG"
+    },
+    {
+        "Nome": "Amanda",
+        "Idade": "24",
+        "Cidade": "Porto Alegre",
+        "Estado": "RS"
+    },
+    {
+        "Nome": "Bruno",
+        "Idade": "30",
+        "Cidade": "Cuiabá",
+        "Estado": "MT"
+    },
+    {
+        "Nome": "Carla",
+        "Idade": "29",
+        "Cidade": "Salvador",
+        "Estado": "BA"
+    },
+    {
+        "Nome": "Gabriela",
+        "Idade": "27",
+        "Cidade": "Fortaleza",
+        "Estado": "CE"
+    },
+    {
+        "Nome": "Thiago",
+        "Idade": "31",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
+    },
+    {
+        "Nome": "Renata",
+        "Idade": "23",
+        "Cidade": "Curitiba",
+        "Estado": "PR"
+    },
+    {
+        "Nome": "Camila",
+        "Idade": "28",
+        "Cidade": "Niterói",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Felipe",
+        "Idade": "27",
+        "Cidade": "Brasília",
+        "Estado": "DF"
+    },
+    {
+        "Nome": "Mariana",
+        "Idade": "30",
+        "Cidade": "Porto Alegre",
+        "Estado": "RS"
+    },
+    {
+        "Nome": "Daniel",
+        "Idade": "25",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ"
+    }
+]

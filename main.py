@@ -201,6 +201,46 @@ Resposta:
 de forma que não é necessário se preocupar em fechar o arquivo manualmente,
 evitando assim possíveis erros e problemas de memória.
 """
+
+import csv
+
+def txt_para_csv():
+    with open('rede_INFNET_atualizado.txt', 'r', encoding='utf-8') as file:
+        linhas = file.readlines()
+
+    dados = []
+    for linha in linhas:
+        partes = linha.strip().split(',')
+        if len(partes) >= 4:
+            nome = partes[0]
+            idade = partes[1]
+            cidade = partes[2]
+            estado = partes[3]
+            dados.append([nome, idade, cidade, estado])
+
+    with open('INFwebNet.csv', 'w', newline='', encoding='utf-8') as csvfile:
+        escritor = csv.writer(csvfile)
+        escritor.writerow(['Nome', 'Idade', 'Cidade', 'Estado'])
+        escritor.writerows(dados)
+
+    print("Dados exportados para INFwebNet.csv com sucesso!")
+
+txt_para_csv()
+
+import json
+
+def csv_para_json():
+    with open('INFwebNet.csv', 'r', encoding='utf-8') as csvfile:
+        leitor = csv.DictReader(csvfile)
+        dados = [linha for linha in leitor]
+
+    with open('INFwebNET.json', 'w', encoding='utf-8') as jsonfile:
+        json.dump(dados, jsonfile, ensure_ascii=False, indent=4)
+
+    print("Dados exportados para INFwebNET.json com sucesso!")
+
+csv_para_json()
+
 def main():
     global usuarios_dict
     usuarios_dict = carregar_usuarios()
