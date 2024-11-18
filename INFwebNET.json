@@ -196,5 +196,22 @@
         "Idade": "25",
         "Cidade": "Rio de Janeiro",
         "Estado": "RJ"
+    },
+    {
+        "nome": "Rafiki",
+        "idade": 29,
+        "localização": [
+            "SP",
+            "SP"
+        ],
+        "hobbys": [
+            "Jogar",
+            "Ler"
+        ],
+        "coding": [
+            "Python",
+            "C"
+        ],
+        "jogos": []
     }
 ]

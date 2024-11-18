@@ -241,19 +241,35 @@ def csv_para_json():
 csv_para_json()
 
 def cadastrar_usuario():
-    decisao = input("Deseja cadastrar um novo usuário? (s/n): ")
+    decisao = input("Deseja cadastrar um novo INFNETiano? (s/n): ")
     
     if decisao.lower() == 's':
-    
         nome = input("Digite o nome: ")
         idade = input("Digite a idade: ")
         cidade = input("Digite a cidade: ")
         estado = input("Digite o estado: ")
+        
+        hobbys = input("Digite os hobbys (separados por vírgula): ").split(',')
+        hobbys = [hobby.strip() for hobby in hobbys]
+
+        coding = input("Digite as linguagens de programação (separadas por vírgula): ").split(',')
+        coding = [lang.strip() for lang in coding]
+        
+        jogos = []
+        while True:
+            jogo = input("Digite o nome do jogo (ou 'sair' para finalizar): ")
+            if jogo.lower() == 'sair':
+                break
+            plataforma = input("Digite a plataforma do jogo: ")
+            jogos.append({"jogo": jogo, "plataforma": plataforma})
 
         novo_usuario = {
             "nome": nome,
             "idade": int(idade),
-            "localização": (cidade, estado)
+            "localização": (cidade, estado),
+            "hobbys": hobbys,
+            "coding": coding,
+            "jogos": jogos
         }
 
         try:
@@ -267,7 +283,7 @@ def cadastrar_usuario():
         with open('INFwebNET.json', 'w', encoding='utf-8') as jsonfile:
             json.dump(dados_existentes, jsonfile, ensure_ascii=False, indent=4)
 
-        print("Novo usuário cadastrado com sucesso!\n")
+        print("Novo INFNETiano cadastrado com sucesso!\n")
         
         print("Atualizando lista de usuários...\n")
         global usuarios_dict
@@ -277,6 +293,7 @@ def cadastrar_usuario():
         listar_usuarios()
     else:
         print("Prosseguindo...\n")
+
 
 def calcular_media_idade():
     df = pd.read_json('INFwebNET.json')
