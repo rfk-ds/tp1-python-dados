@@ -301,6 +301,63 @@ def calcular_media_idade():
     media_idade = df['Idade'].mean()
     print(f"A média de idade dos INFNETianos é: {media_idade:.0f} anos")
 
+def carregar_novos_usuarios():
+    try:
+        with open('dados_usuarios_novos.txt', 'r', encoding='utf-8') as file:
+            leitor = csv.reader(file, delimiter=';')
+            novos_usuarios = []
+            next(leitor) 
+            
+            for linha in leitor:
+                if len(linha) >= 5:  # Verifica se a linha tem pelo menos 5 campos
+                    nome = linha[1].strip() 
+                    try:
+                        idade = int(float(linha[4].strip()))  # Idade está na quinta coluna
+                    except ValueError:
+                        print(f"Idade inválida para o usuário {nome}. Ignorando...")
+                        continue
+                    
+                    cidade = linha[6].strip()
+                    estado = linha[7].strip()
+                    
+                    hobbys = linha[8].strip().strip("[]").split(',') if len(linha) > 8 else []
+                    coding = linha[9].strip().strip("[]").split(',') if len(linha) > 9 else []
+                    
+                    jogos = []
+                    if len(linha) > 10:
+                        for jogo_info in linha[10:]:
+                            jogo_dados = jogo_info.strip().split(',')
+                            if len(jogo_dados) == 2:
+                                jogos.append({"jogo": jogo_dados[0].strip(), "plataforma": jogo_dados[1].strip()})
+                    
+                    novo_usuario = {
+                        "nome": nome,
+                        "idade": idade,
+                        "localização": (cidade, estado),
+                        "hobbys": hobbys,
+                        "coding": coding,
+                        "jogos": jogos
+                    }
+                    novos_usuarios.append(novo_usuario)
+                    
+            global usuarios_dict
+            for usuario in novos_usuarios:
+                usuarios_dict[usuario["nome"]] = {
+                    "idade": usuario["idade"],
+                    "localização": usuario["localização"],
+                    "hobbys": usuario["hobbys"],
+                    "coding": usuario["coding"],
+                    "jogos": usuario["jogos"],
+                    "amigos": set()
+                }
+                
+            print(f"{len(novos_usuarios)} novos usuários carregados com sucesso!")
+            
+    except FileNotFoundError:
+        print("Arquivo 'dados_usuarios_novos.txt' não encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
 
 
 def main():
@@ -308,6 +365,9 @@ def main():
     usuarios_dict = carregar_usuarios()
     
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Rede INFwebNET ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    
+    carregar_novos_usuarios()
+    print("\n")
     
     print("---------------- Lista de Usuários ---------------- ")
     listar_usuarios()

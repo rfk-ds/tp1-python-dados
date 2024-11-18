@@ -13,9 +13,9 @@
     },
     {
         "Nome": "Beatriz",
-        "Idade": "30",
-        "Cidade": "Belo Horizonte",
-        "Estado": "MG"
+        "Idade": "27",
+        "Cidade": "Salvador",
+        "Estado": "BA"
     },
     {
         "Nome": "Angelo",
@@ -31,27 +31,27 @@
     },
     {
         "Nome": "João",
-        "Idade": "25",
+        "Idade": "28",
+        "Cidade": "Juiz de Fora",
+        "Estado": "MG"
+    },
+    {
+        "Nome": "Ana",
+        "Idade": "45",
+        "Cidade": "Juiz de Fora",
+        "Estado": ""
+    },
+    {
+        "Nome": "Carlos",
+        "Idade": "36",
         "Cidade": "Rio de Janeiro",
         "Estado": "RJ"
     },
     {
-        "Nome": "Ana",
-        "Idade": "22",
-        "Cidade": "São Paulo",
-        "Estado": "SP"
-    },
-    {
-        "Nome": "Carlos",
-        "Idade": "30",
+        "Nome": "Fernanda",
+        "Idade": "23",
         "Cidade": "Belo Horizonte",
         "Estado": "MG"
-    },
-    {
-        "Nome": "Fernanda",
-        "Idade": "28",
-        "Cidade": "Curitiba",
-        "Estado": "PR"
     },
     {
         "Nome": "Marcos",
@@ -73,9 +73,9 @@
     },
     {
         "Nome": "Lucas",
-        "Idade": "31",
-        "Cidade": "Salvador",
-        "Estado": "BA"
+        "Idade": "33",
+        "Cidade": "São Paulo",
+        "Estado": "SP"
     },
     {
         "Nome": "Fernando",
@@ -97,9 +97,9 @@
     },
     {
         "Nome": "Sofia",
-        "Idade": "21",
-        "Cidade": "Campinas",
-        "Estado": "SP"
+        "Idade": "46",
+        "Cidade": "Juiz de Fora",
+        "Estado": "MG"
     },
     {
         "Nome": "Rafaela",
@@ -133,9 +133,9 @@
     },
     {
         "Nome": "Pedro",
-        "Idade": "26",
-        "Cidade": "Belo Horizonte",
-        "Estado": "MG"
+        "Idade": "39",
+        "Cidade": "Porto Alegre",
+        "Estado": "RS"
     },
     {
         "Nome": "Amanda",
@@ -145,15 +145,15 @@
     },
     {
         "Nome": "Bruno",
-        "Idade": "30",
-        "Cidade": "Cuiabá",
-        "Estado": "MT"
+        "Idade": "47",
+        "Cidade": "Brasília",
+        "Estado": "DF"
     },
     {
         "Nome": "Carla",
-        "Idade": "29",
-        "Cidade": "Salvador",
-        "Estado": "BA"
+        "Idade": "33",
+        "Cidade": "Juiz de Fora",
+        "Estado": "MG"
     },
     {
         "Nome": "Gabriela",
@@ -175,9 +175,9 @@
     },
     {
         "Nome": "Camila",
-        "Idade": "28",
-        "Cidade": "Niterói",
-        "Estado": "RJ"
+        "Idade": "38",
+        "Cidade": "Manaus",
+        "Estado": ""
     },
     {
         "Nome": "Felipe",
@@ -187,9 +187,9 @@
     },
     {
         "Nome": "Mariana",
-        "Idade": "30",
-        "Cidade": "Porto Alegre",
-        "Estado": "RS"
+        "Idade": "29",
+        "Cidade": "",
+        "Estado": ""
     },
     {
         "Nome": "Daniel",
@@ -198,20 +198,45 @@
         "Estado": "RJ"
     },
     {
-        "nome": "Rafiki",
-        "idade": 29,
-        "localização": [
-            "SP",
-            "SP"
-        ],
-        "hobbys": [
-            "Jogar",
-            "Ler"
-        ],
-        "coding": [
-            "Python",
-            "C"
-        ],
-        "jogos": []
+        "Nome": "Matheus",
+        "Idade": "26",
+        "Cidade": "Petropolis",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Larissa",
+        "Idade": "30",
+        "Cidade": "Petropolis",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Luís",
+        "Idade": "43",
+        "Cidade": "Recife",
+        "Estado": "PE"
+    },
+    {
+        "Nome": "Rafael",
+        "Idade": "44",
+        "Cidade": "Salvador",
+        "Estado": "BA"
+    },
+    {
+        "Nome": "Julia",
+        "Idade": "44",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ"
+    },
+    {
+        "Nome": "Guilherme",
+        "Idade": "41",
+        "Cidade": "",
+        "Estado": ""
+    },
+    {
+        "Nome": "Maria",
+        "Idade": "22",
+        "Cidade": "Petropolis",
+        "Estado": "RJ"
     }
 ]
