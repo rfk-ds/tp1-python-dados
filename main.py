@@ -361,7 +361,48 @@ def carregar_novos_usuarios():
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
+def carregar_dados():
+    try:
+        # Carregar dados do arquivo base_inicial.txt
+        base_inicial_df = pd.read_csv('base_inicial.txt', sep='?', header=0, on_bad_lines='skip')
+    except Exception as e:
+        print(f"Erro ao carregar base_inicial.txt: {e}")
+        base_inicial_df = pd.DataFrame()
 
+    try:
+        # Carregar dados do arquivo rede_INFNET.txt
+        rede_infnet_df = pd.read_csv('rede_INFNET.txt', header=None, names=['Nome', 'Idade', 'Cidade', 'Estado', 'Amigos'], on_bad_lines='skip')
+    except Exception as e:
+        print(f"Erro ao carregar rede_INFNET.txt: {e}")
+        rede_infnet_df = pd.DataFrame()
+
+    try:
+        # Carregar dados do arquivo INFwebNet.csv
+        infwebnet_df = pd.read_csv('INFwebNet.csv', on_bad_lines='skip')
+    except Exception as e:
+        print(f"Erro ao carregar INFwebNet.csv: {e}")
+        infwebnet_df = pd.DataFrame()
+
+    try:
+        # Carregar dados do arquivo INFwebNET.json
+        with open('INFwebNET.json', 'r') as file:
+            json_data = json.load(file)
+        infwebnet_json_df = pd.json_normalize(json_data)
+    except Exception as e:
+        print(f"Erro ao carregar INFwebNET.json: {e}")
+        infwebnet_json_df = pd.DataFrame()
+
+    try:
+        # Carregar novos usuários do arquivo dados_usuarios_novos.txt
+        novos_usuarios_df = pd.read_csv('dados_usuarios_novos.txt', sep=';', header=0, on_bad_lines='skip')
+    except Exception as e:
+        print(f"Erro ao carregar dados_usuarios_novos.txt: {e}")
+        novos_usuarios_df = pd.DataFrame()
+
+    # Concatenar todos os DataFrames
+    todos_dados = pd.concat([base_inicial_df, rede_infnet_df, infwebnet_df, infwebnet_json_df, novos_usuarios_df], ignore_index=True)
+
+    return todos_dados
 
 def main():
     global usuarios_dict
@@ -427,4 +468,6 @@ def main():
     calcular_media_idade()
     print("\n")
 
+    df_combinado = carregar_dados()
+    print(df_combinado)
 main()
