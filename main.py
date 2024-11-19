@@ -181,7 +181,10 @@ def carregar_usuarios():
 def quantidade_amigos(usuarios_dict):
     for usuario, dados in usuarios_dict.items():
         amigos = dados["amigos"]
-        print(f"{usuario} tem {len(amigos) - 1} amigos.")
+        if len(amigos) > 0:
+            print(f"{usuario} tem {len(amigos) - 1} amigos.")
+        else:
+            print(f"{usuario} tem {len(amigos)} amigos.")
 
 # 15. Usuários Mais Populares ⭐⭐⭐
 def usuarios_mais_populares():
