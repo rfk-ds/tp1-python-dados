@@ -1,36 +1,36 @@
-Rafiki,25,Rio de Janeiro,RJ,,Carlos,Daniel,Renata,Felipe,Angelo,Beatriz,Leonardo
+Rafiki,25,Rio de Janeiro,RJ,,Beatriz,Daniel,Renata,Carlos,Angelo,Felipe,Leonardo
 Olivia,22,São Paulo,SP,
 Beatriz,27,Salvador,BA,Rafiki
 Angelo,28,Curitiba,PR,,Rafiki
-Leonardo,29,Campinas,SP,Rafiki,Mateus,Caio,Renata
+Leonardo,29,Campinas,SP,Renata,Mateus,Caio,Rafiki
 João,28,Juiz de Fora,MG,
 Ana,45,Juiz de Fora,,
 Carlos,36,Rio de Janeiro,RJ,Rafiki
 Fernanda,23,Belo Horizonte,MG,
 Marcos,27,Porto Alegre,RS,João,Carlos
-Clara,26,Brasília,DF,Fernanda,Lívia
-Lívia,24,São Paulo,SP,Lucas,Marcos,Clara
+Clara,26,Brasília,DF,Lívia,Fernanda
+Lívia,24,São Paulo,SP,Lucas,Clara,Marcos
 Lucas,33,São Paulo,SP,
 Fernando,29,Fortaleza,CE,Lucas,Aline
 Aline,23,Florianópolis,SC,Fernando,Caio,Clara
 Caio,27,Curitiba,PR,Aline,Clara
 Sofia,46,Juiz de Fora,MG,
 Rafaela,22,Recife,PE,Clara,Sofia
-Mateus,32,Rio de Janeiro,RJ,João,Fernando,Caio
-Tiago,28,Brasília,DF,Mateus,Lívia,Aline
-Paulo,33,Cidade Desconhecida,RN,Fernanda,Tiago,Lucas
-Juliana,25,São Paulo,SP,Marcos,Sofia,Rafaela
+Mateus,32,Rio de Janeiro,RJ,Fernando,João,Caio
+Tiago,28,Brasília,DF,Aline,Lívia,Mateus
+Paulo,33,Cidade Desconhecida,RN,Lucas,Tiago,Fernanda
+Juliana,25,São Paulo,SP,Rafaela,Sofia,Marcos
 Pedro,39,Porto Alegre,RS,
 Amanda,24,Porto Alegre,RS,Lívia,Caio,Pedro
 Bruno,47,Brasília,DF,
 Carla,33,Juiz de Fora,MG,
-Gabriela,27,Fortaleza,CE,Aline,Carla,Rafaela
-Thiago,31,São Paulo,SP,João,Lucas,Clara,Amanda
-Renata,23,Curitiba,PR,Rafiki,Clara,Sofia,Fernando
+Gabriela,27,Fortaleza,CE,Carla,Rafaela,Aline
+Thiago,31,São Paulo,SP,João,Amanda,Lucas,Clara
+Renata,23,Curitiba,PR,Fernando,Rafiki,Clara,Sofia
 Camila,38,Manaus,,
-Felipe,27,Brasília,DF,Rafiki,Carla,Renata
+Felipe,27,Brasília,DF,Carla,Renata,Rafiki
 Mariana,29,,,
-Daniel,25,Rio de Janeiro,RJ,Rafiki,Paulo,Camila,Amanda
+Daniel,25,Rio de Janeiro,RJ,Amanda,Camila,Paulo,Rafiki
 Matheus,26,Petropolis,RJ,
 Larissa,30,Petropolis,RJ,
 Luís,43,Recife,PE,
