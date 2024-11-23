@@ -3,6 +3,8 @@ import random
 import csv
 import json
 import pandas as pd
+from datetime import datetime
+import numpy as np
 
 # 1. Aquecendo os motores ⭐
 usuarios = [
@@ -361,48 +363,68 @@ def carregar_novos_usuarios():
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
-def carregar_dados():
-    try:
-        # Carregar dados do arquivo base_inicial.txt
-        base_inicial_df = pd.read_csv('base_inicial.txt', sep='?', header=0, on_bad_lines='skip')
-    except Exception as e:
-        print(f"Erro ao carregar base_inicial.txt: {e}")
-        base_inicial_df = pd.DataFrame()
+def organizar_dados_em_dataframe():
+    dados_usuarios = []
+    
+    ano_atual = datetime.now().year
+    
+    for usuario, dados in usuarios_dict.items():
+        nome = usuario
+        idade = dados.get("idade", None)
+        cidade, estado = dados["localização"]
+        
+        hobbys = ', '.join(dados.get("hobbys", [])) or 'Nenhum'
+        coding = ', '.join(dados.get("coding", [])) or 'Nenhuma'
+        jogos = ', '.join([f"{jogo['jogo']} ({jogo['plataforma']})" for jogo in dados.get("jogos", [])]) or 'Nenhum'
+        
+        # Calculando o ano de nascimento
+        ano_nascimento = ano_atual - idade if idade is not None else None
+        
+        dados_usuarios.append({
+            "Nome": nome,
+            "Idade": idade,
+            "Cidade": cidade if cidade else np.nan,  # Convertendo string vazia em NaN
+            "Estado": estado,
+            "Hobbys": hobbys,
+            "Linguagens de Programação": coding,
+            "Jogos": jogos,
+            "Ano de Nascimento": ano_nascimento
+        })
+    
+    df = pd.DataFrame(dados_usuarios)
+    
+    media_idade = df['Idade'].mean()
+    df['Idade'] = df['Idade'].fillna(media_idade)
+    
+    if df['Cidade'].isnull().all():
+        print("Todos os valores da coluna 'Cidade' estão ausentes. Não é possível preencher.")
+    else:
+        modo_cidade = df['Cidade'].mode()[0] if not df['Cidade'].mode().empty else 'Desconhecida'
+        df['Cidade'] = df['Cidade'].fillna(modo_cidade)
+    
+    df['Ano de Nascimento'] = ano_atual - df['Idade']
+    
+    print(df)
+    
+    return df
 
-    try:
-        # Carregar dados do arquivo rede_INFNET.txt
-        rede_infnet_df = pd.read_csv('rede_INFNET.txt', header=None, names=['Nome', 'Idade', 'Cidade', 'Estado', 'Amigos'], on_bad_lines='skip')
-    except Exception as e:
-        print(f"Erro ao carregar rede_INFNET.txt: {e}")
-        rede_infnet_df = pd.DataFrame()
+    """
+    Explicação campos com valores ausentes e critério utilizados para preenchimento:
+    
+    Campo: idade
 
-    try:
-        # Carregar dados do arquivo INFwebNet.csv
-        infwebnet_df = pd.read_csv('INFwebNet.csv', on_bad_lines='skip')
-    except Exception as e:
-        print(f"Erro ao carregar INFwebNet.csv: {e}")
-        infwebnet_df = pd.DataFrame()
+    Critério: Preencher valores ausentes com a média das idades.
 
-    try:
-        # Carregar dados do arquivo INFwebNET.json
-        with open('INFwebNET.json', 'r') as file:
-            json_data = json.load(file)
-        infwebnet_json_df = pd.json_normalize(json_data)
-    except Exception as e:
-        print(f"Erro ao carregar INFwebNET.json: {e}")
-        infwebnet_json_df = pd.DataFrame()
-
-    try:
-        # Carregar novos usuários do arquivo dados_usuarios_novos.txt
-        novos_usuarios_df = pd.read_csv('dados_usuarios_novos.txt', sep=';', header=0, on_bad_lines='skip')
-    except Exception as e:
-        print(f"Erro ao carregar dados_usuarios_novos.txt: {e}")
-        novos_usuarios_df = pd.DataFrame()
-
-    # Concatenar todos os DataFrames
-    todos_dados = pd.concat([base_inicial_df, rede_infnet_df, infwebnet_df, infwebnet_json_df, novos_usuarios_df], ignore_index=True)
-
-    return todos_dados
+    Justificativa: A média é uma boa escolha para dados numéricos, pois fornece um valor
+    central que representa bem o conjunto de dados como um todo.
+    
+    Campo: cidade
+    
+    Critério: Preencher valores ausentes com o valor mais frequente das cidades.
+    
+    Justificativa: O valor mais frequente é uma boa escolha para dados categóricos, pois fornece o valor
+    mais frequente, que é uma boa representação da maioria dos dados.
+    """
 
 def main():
     global usuarios_dict
@@ -468,6 +490,6 @@ def main():
     calcular_media_idade()
     print("\n")
 
-    df_combinado = carregar_dados()
-    print(df_combinado)
+    print("---------------- Organizando dados em DataFrame ---------------- ")
+    organizar_dados_em_dataframe()
 main()
