@@ -1,0 +1,5 @@
+Nome,Idade,Cidade,Estado,Hobbys,Linguagens de Programação,Jogos,Ano de Nascimento
+Ana,45,Juiz de Fora,,"'ciclismo',  'fotografia'","'C++',  'PHP',  'Ruby',  'Go',  'C#'",Nenhum,1979
+Camila,38,Manaus,,"'ciclismo',  'leitura',  'cozinhar'","'Java',  'Ruby'",[('The Witcher 3' ('Xbox One')]),1986
+Mariana,29,Rio de Janeiro,,"'música', 'viagem'","'Java', 'C#'",[('The Witcher 3' ('Xbox One')]),1995
+Guilherme,41,Rio de Janeiro,,"'fotografia',  'natação',  'música',  'viagem'","'Python',  'Kotlin',  'PHP',  'C++',  'Swift'",[('Overwatch' ('PC')]),1983

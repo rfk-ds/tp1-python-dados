@@ -1,36 +1,36 @@
-Rafiki,25,Rio de Janeiro,RJ,,Daniel,Beatriz,Renata,Leonardo,Angelo,Carlos,Felipe
+Rafiki,25,Rio de Janeiro,RJ,,Angelo,Daniel,Felipe,Leonardo,Renata,Beatriz,Carlos
 Olivia,22,São Paulo,SP,
 Beatriz,27,Salvador,BA,Rafiki
 Angelo,28,Curitiba,PR,,Rafiki
-Leonardo,29,Campinas,SP,Mateus,Caio,Renata,Rafiki
+Leonardo,29,Campinas,SP,Rafiki,Caio,Mateus,Renata
 João,28,Juiz de Fora,MG,
 Ana,45,Juiz de Fora,,
 Carlos,36,Rio de Janeiro,RJ,Rafiki
 Fernanda,23,Belo Horizonte,MG,
 Marcos,27,Porto Alegre,RS,João,Carlos
-Clara,26,Brasília,DF,Fernanda,Lívia
-Lívia,24,São Paulo,SP,Lucas,Clara,Marcos
+Clara,26,Brasília,DF,Lívia,Fernanda
+Lívia,24,São Paulo,SP,Clara,Marcos,Lucas
 Lucas,33,São Paulo,SP,
-Fernando,29,Fortaleza,CE,Lucas,Aline
-Aline,23,Florianópolis,SC,Fernando,Caio,Clara
-Caio,27,Curitiba,PR,Aline,Clara
+Fernando,29,Fortaleza,CE,Aline,Lucas
+Aline,23,Florianópolis,SC,Caio,Clara,Fernando
+Caio,27,Curitiba,PR,Clara,Aline
 Sofia,46,Juiz de Fora,MG,
-Rafaela,22,Recife,PE,Sofia,Clara
-Mateus,32,Rio de Janeiro,RJ,João,Fernando,Caio
-Tiago,28,Brasília,DF,Mateus,Lívia,Aline
-Paulo,33,Cidade Desconhecida,RN,Lucas,Tiago,Fernanda
-Juliana,25,São Paulo,SP,Sofia,Rafaela,Marcos
+Rafaela,22,Recife,PE,Clara,Sofia
+Mateus,32,Rio de Janeiro,RJ,Caio,João,Fernando
+Tiago,28,Brasília,DF,Lívia,Mateus,Aline
+Paulo,33,Cidade Desconhecida,RN,Tiago,Lucas,Fernanda
+Juliana,25,São Paulo,SP,Rafaela,Sofia,Marcos
 Pedro,39,Porto Alegre,RS,
-Amanda,24,Porto Alegre,RS,Pedro,Caio,Lívia
+Amanda,24,Porto Alegre,RS,Caio,Lívia,Pedro
 Bruno,47,Brasília,DF,
 Carla,33,Juiz de Fora,MG,
-Gabriela,27,Fortaleza,CE,Carla,Rafaela,Aline
-Thiago,31,São Paulo,SP,Amanda,João,Lucas,Clara
-Renata,23,Curitiba,PR,Sofia,Fernando,Rafiki,Clara
+Gabriela,27,Fortaleza,CE,Rafaela,Aline,Carla
+Thiago,31,São Paulo,SP,Amanda,João,Clara,Lucas
+Renata,23,Curitiba,PR,Rafiki,Clara,Sofia,Fernando
 Camila,38,Manaus,,
 Felipe,27,Brasília,DF,Rafiki,Renata,Carla
 Mariana,29,,,
-Daniel,25,Rio de Janeiro,RJ,Amanda,Camila,Paulo,Rafiki
+Daniel,25,Rio de Janeiro,RJ,Rafiki,Paulo,Camila,Amanda
 Matheus,26,Petropolis,RJ,
 Larissa,30,Petropolis,RJ,
 Luís,43,Recife,PE,

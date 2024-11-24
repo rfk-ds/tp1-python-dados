@@ -1,0 +1,5 @@
+Nome,Idade,Cidade,Estado,Hobbys,Linguagens de Programação,Jogos,Ano de Nascimento
+João,28,Juiz de Fora,MG,'fotografia',"'Swift',  'Kotlin',  'C#',  'Java'",[('Apex Legends' ('PC')]),1996
+Fernanda,23,Belo Horizonte,MG,Nenhum,"'Java',  'Python'",[('Overwatch' ('PC')]),2001
+Sofia,46,Juiz de Fora,MG,"'viagem',  'pintura'",Nenhuma,Nenhum,1978
+Carla,33,Juiz de Fora,MG,"'fotografia',  'futebol',  'música'","'Python',  'Swift',  'JavaScript'",Nenhum,1991

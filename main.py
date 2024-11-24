@@ -425,6 +425,40 @@ def organizar_dados_em_dataframe():
     Justificativa: O valor mais frequente é uma boa escolha para dados categóricos, pois fornece o valor
     mais frequente, que é uma boa representação da maioria dos dados.
     """
+    
+def salvar_grupos_por_estado(df):
+    """
+    Filtra os usuários por estado e salva em arquivos CSV.
+    
+    Parâmetros:
+    df : DataFrame
+        O DataFrame contendo os dados dos INFNETianos.
+    """
+    estados_unicos = df['Estado'].unique()
+    for estado in estados_unicos:
+        if pd.notna(estado):
+            df_estado = df[df['Estado'] == estado]
+            
+            sigla_estado = estado.upper()
+            nome_arquivo = f"grupo_{sigla_estado}.csv"
+            
+            df_estado.to_csv(nome_arquivo, index=False)
+            print(f"Usuários do estado {estado} salvos em {nome_arquivo}.")
+import pandas as pd
+
+def filtrar_por_ano_nascimento(df):
+    decisao = input("Deseja filtrar por ano de nascimento? (s/n): ")
+    
+    if decisao.lower() == 'n':
+        return df
+    
+    ano_inicial = int(input("Digite o ano inicial: "))
+    ano_final = int(input("Digite o ano final: "))
+    
+    df_filtrado = df[(df['Ano de Nascimento'] >= ano_inicial) & (df['Ano de Nascimento'] <= ano_final)]
+    
+    print("\n", df_filtrado)
+
 
 def main():
     global usuarios_dict
@@ -491,5 +525,10 @@ def main():
     print("\n")
 
     print("---------------- Organizando dados em DataFrame ---------------- ")
-    organizar_dados_em_dataframe()
+    df_informacoes = organizar_dados_em_dataframe()
+    df_informacoes.to_json("INFwebNet_Data.json", orient="records", lines=True)
+    salvar_grupos_por_estado(df_informacoes)
+    filtrar_por_ano_nascimento(df_informacoes)
+    
+    
 main()

@@ -5,30 +5,30 @@ Angelo,28,Curitiba,PR,
 Leonardo,27,Porto Alegre,RS,
 João,25,Rio de Janeiro,RJ,Ana,Carlos,Marcos
 Ana,22,São Paulo,SP,João,Fernanda
-Carlos,30,Belo Horizonte,MG,João,Caio,Marcos
+Carlos,30,Belo Horizonte,MG,Caio,João,Marcos
 Fernanda,28,Curitiba,PR,Ana
 Marcos,27,Porto Alegre,RS,João,Carlos
-Clara,26,Brasília,DF,Fernanda,Lívia
-Lívia,24,São Paulo,SP,Lucas,Marcos,Clara
-Lucas,31,Salvador,BA,Fernando,Lívia
-Fernando,29,Fortaleza,CE,Lucas,Aline
-Aline,23,Florianópolis,SC,Caio,Fernando,Clara
+Clara,26,Brasília,DF,Lívia,Fernanda
+Lívia,24,São Paulo,SP,Clara,Marcos,Lucas
+Lucas,31,Salvador,BA,Lívia,Fernando
+Fernando,29,Fortaleza,CE,Aline,Lucas
+Aline,23,Florianópolis,SC,Caio,Clara,Fernando
 Caio,27,Curitiba,PR,Clara,Aline
-Sofia,21,Campinas,SP,Fernanda,Rafaela
-Rafaela,22,Recife,PE,Sofia,Clara
-Mateus,32,Rio de Janeiro,RJ,João,Fernando,Caio
-Tiago,28,Brasília,DF,Mateus,Lívia,Aline
-Paulo,33,Cidade Desconhecida,RN,Lucas,Tiago,Fernanda
-Juliana,25,São Paulo,SP,Sofia,Marcos,Rafaela
+Sofia,21,Campinas,SP,Rafaela,Fernanda
+Rafaela,22,Recife,PE,Clara,Sofia
+Mateus,32,Rio de Janeiro,RJ,Caio,João,Fernando
+Tiago,28,Brasília,DF,Lívia,Mateus,Aline
+Paulo,33,Cidade Desconhecida,RN,Tiago,Lucas,Fernanda
+Juliana,25,São Paulo,SP,Rafaela,Sofia,Marcos
 Pedro,26,Belo Horizonte,MG,João,Aline
-Amanda,24,Porto Alegre,RS,Pedro,Caio,Lívia
+Amanda,24,Porto Alegre,RS,Lívia,Caio,Pedro
 Bruno,30,Cuiabá,MT,Ana,Mateus,Marcos
-Carla,29,Salvador,BA,Lucas,Tiago,Fernando
-Gabriela,27,Fortaleza,CE,Aline,Rafaela,Carla
+Carla,29,Salvador,BA,Tiago,Lucas,Fernando
+Gabriela,27,Fortaleza,CE,Rafaela,Aline,Carla
 Thiago,31,São Paulo,SP,Amanda,João,Clara,Lucas
-Renata,23,Curitiba,PR,Sofia,Fernando,Clara
+Renata,23,Curitiba,PR,Clara,Sofia,Fernando
 Leonardo,29,Campinas,SP,Caio,Mateus,Renata
-Camila,28,Niterói,RJ,Lucas,Caio,Juliana,Bruno
+Camila,28,Niterói,RJ,Caio,Lucas,Juliana,Bruno
 Felipe,27,Brasília,DF,Renata,Carla
-Mariana,30,Porto Alegre,RS,Fernando,Felipe,Lívia
-Daniel,25,Rio de Janeiro,RJ,Amanda,Camila,Paulo
+Mariana,30,Porto Alegre,RS,Felipe,Lívia,Fernando
+Daniel,25,Rio de Janeiro,RJ,Paulo,Camila,Amanda
