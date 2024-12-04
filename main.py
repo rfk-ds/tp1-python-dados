@@ -444,7 +444,7 @@ def salvar_grupos_por_estado(df):
             
             df_estado.to_csv(nome_arquivo, index=False)
             print(f"Usuários do estado {estado} salvos em {nome_arquivo}.")
-import pandas as pd
+
 
 def filtrar_por_ano_nascimento(df):
     decisao = input("Deseja filtrar por ano de nascimento? (s/n): ")
@@ -459,6 +459,29 @@ def filtrar_por_ano_nascimento(df):
     
     print("\n", df_filtrado)
 
+def selecionar_infnetiano():
+    nome_busca = input("Digite o nome do INFNETiano que deseja buscar: ").strip()
+    
+    usuarios_encontrados = [usuario for usuario in usuarios_dict.keys() if nome_busca.lower() in usuario.lower()]
+    
+    if usuarios_encontrados:
+        print("INFNETiano(s) encontrado(s):")
+        for i, usuario in enumerate(usuarios_encontrados):
+            print(f"{i + 1}. {usuario}")
+        
+        escolha = input("Digite o número do INFNETiano que deseja selecionar: ")
+        
+        try:
+            indice = int(escolha) - 1
+            if 0 <= indice < len(usuarios_encontrados):
+                usuario_selecionado = usuarios_encontrados[indice]
+                print(f"Você selecionou: {usuario_selecionado}")
+            else:
+                print("Seleção inválida. Tente novamente.")
+        except ValueError:
+            print("Entrada inválida. Por favor, insira um número.")
+    else:
+        print("Nenhum INFNETiano encontrado com esse nome.")
 
 def main():
     global usuarios_dict
@@ -529,6 +552,10 @@ def main():
     df_informacoes.to_json("INFwebNet_Data.json", orient="records", lines=True)
     salvar_grupos_por_estado(df_informacoes)
     filtrar_por_ano_nascimento(df_informacoes)
+    print("\n")
     
+    print("---------------- Selecionando INFNETiano ---------------- ")
+    selecionar_infnetiano()
+    print("\n")
     
 main()
