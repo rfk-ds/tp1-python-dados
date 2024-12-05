@@ -81,6 +81,17 @@ usuarios_dict = {
 }
 
 def adicionar_amigo(usuario, amigo):
+    """
+    Adiciona um amigo à lista de amigos de um usuário.
+
+    Parâmetros:
+    usuario (str): O nome do usuário que está adicionando um amigo.
+    amigo (str): O nome do amigo a ser adicionado.
+
+    Se o usuário e o amigo existirem no dicionário de usuários,
+    o amigo será adicionado à lista de amigos do usuário e vice-versa.
+    Caso contrário, uma mensagem de erro será exibida.
+    """
     if usuario in usuarios_dict and amigo in usuarios_dict:
         usuarios_dict[usuario]["amigos"].add(amigo)
         usuarios_dict[amigo]["amigos"].add(usuario)
@@ -90,6 +101,17 @@ def adicionar_amigo(usuario, amigo):
 
 # 8. Verificando Conexões ⭐⭐
 def verificar_popularidade(usuario):
+    """
+    Verifica a popularidade de um usuário com base no número de amigos.
+
+    Parâmetros:
+    usuario (str): O nome do usuário a ser verificado.
+
+    A função conta quantos usuários têm o usuário especificado em sua lista de amigos.
+    Se o número de amigos for maior que 4, o usuário é considerado popular.
+    Caso contrário, é considerado não popular.
+    Uma mensagem é exibida indicando a popularidade do usuário.
+    """
     contagem = 0
     for perfil in usuarios_dict.values():
         if usuario in perfil["amigos"]:
@@ -476,12 +498,67 @@ def selecionar_infnetiano():
             if 0 <= indice < len(usuarios_encontrados):
                 usuario_selecionado = usuarios_encontrados[indice]
                 print(f"Você selecionou: {usuario_selecionado}")
+                
+                # Atualizando dados
+                atualizar_dados(usuario_selecionado)
             else:
                 print("Seleção inválida. Tente novamente.")
         except ValueError:
             print("Entrada inválida. Por favor, insira um número.")
     else:
         print("Nenhum INFNETiano encontrado com esse nome.")
+
+def atualizar_dados(usuario):
+    print(f"\nAtualizando dados para: {usuario}")
+    
+    dados_usuario = usuarios_dict[usuario]
+    
+    nova_idade = input(f"Idade atual: {dados_usuario['idade']}. Digite a nova idade (ou pressione Enter para manter): ")
+    if nova_idade:
+        dados_usuario['idade'] = int(nova_idade)
+    
+    nova_cidade = input(f"Cidade atual: {dados_usuario['localização'][0]}. Digite a nova cidade (ou pressione Enter para manter): ")
+    nova_estado = input(f"Estado atual: {dados_usuario['localização'][1]}. Digite o novo estado (ou pressione Enter para manter): ")
+    
+    if nova_cidade or nova_estado:
+        cidade_atual = dados_usuario['localização'][0] if nova_cidade == '' else nova_cidade
+        estado_atual = dados_usuario['localização'][1] if nova_estado == '' else nova_estado
+        dados_usuario['localização'] = (cidade_atual, estado_atual)
+
+    print(f"Hobbies atuais: {', '.join(dados_usuario.get('hobbys', []))}")
+    novos_hobbys = input("Digite até 5 novos hobbys (separados por vírgula): ").split(',')
+    novos_hobbys = [hobby.strip() for hobby in novos_hobbys][:5] 
+    dados_usuario['hobbys'] = novos_hobbys
+
+    print(f"Jogos atuais: {', '.join([jogo['jogo'] for jogo in dados_usuario.get('jogos', [])])}")
+    novos_jogos = []
+    while len(novos_jogos) < 5:
+        jogo = input("Digite o nome do jogo (ou 'sair' para finalizar): ")
+        if jogo.lower() == 'sair':
+            break
+        plataforma = input("Digite a plataforma do jogo: ")
+        novos_jogos.append({"jogo": jogo.strip(), "plataforma": plataforma.strip()})
+
+    dados_usuario['jogos'] = novos_jogos[:5] 
+
+    usuarios_dict[usuario] = dados_usuario
+    print("Dados atualizados com sucesso!")
+    
+def linguagens_mais_citadas():
+    contador = Counter()
+
+    for dados in usuarios_dict.values():
+        linguagens = dados.get("coding", [])
+        contador.update(linguagens)
+
+    populares = contador.most_common(5)
+
+    if populares:
+        print("\nAs 5 linguagens de programação mais citadas entre os INFNETianos:")
+        for linguagem, quantidade in populares:
+            print(f"{linguagem}: {quantidade} vez(es)")
+    else:
+        print("Nenhuma linguagem de programação foi citada.")
 
 def main():
     global usuarios_dict
@@ -556,6 +633,10 @@ def main():
     
     print("---------------- Selecionando INFNETiano ---------------- ")
     selecionar_infnetiano()
+    print("\n")
+    
+    print("---------------- Linguagens mais citadas ---------------- ")
+    linguagens_mais_citadas()
     print("\n")
     
 main()

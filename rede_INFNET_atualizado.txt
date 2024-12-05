@@ -1,36 +1,36 @@
-Rafiki,25,Rio de Janeiro,RJ,,Carlos,Leonardo,Daniel,Felipe,Renata,Beatriz,Angelo
+Rafiki,25,Rio de Janeiro,RJ,,Leonardo,Beatriz,Angelo,Daniel,Carlos,Renata,Felipe
 Olivia,22,São Paulo,SP,
 Beatriz,27,Salvador,BA,Rafiki
 Angelo,28,Curitiba,PR,,Rafiki
-Leonardo,29,Campinas,SP,Renata,Caio,Rafiki,Mateus
+Leonardo,29,Campinas,SP,Mateus,Rafiki,Caio,Renata
 João,28,Juiz de Fora,MG,
 Ana,45,Juiz de Fora,,
 Carlos,36,Rio de Janeiro,RJ,Rafiki
 Fernanda,23,Belo Horizonte,MG,
 Marcos,27,Porto Alegre,RS,João,Carlos
 Clara,26,Brasília,DF,Lívia,Fernanda
-Lívia,24,São Paulo,SP,Marcos,Clara,Lucas
+Lívia,24,São Paulo,SP,Clara,Lucas,Marcos
 Lucas,33,São Paulo,SP,
-Fernando,29,Fortaleza,CE,Aline,Lucas
-Aline,23,Florianópolis,SC,Fernando,Clara,Caio
-Caio,27,Curitiba,PR,Aline,Clara
+Fernando,29,Fortaleza,CE,Lucas,Aline
+Aline,23,Florianópolis,SC,Clara,Fernando,Caio
+Caio,27,Curitiba,PR,Clara,Aline
 Sofia,46,Juiz de Fora,MG,
-Rafaela,22,Recife,PE,Clara,Sofia
+Rafaela,22,Recife,PE,Sofia,Clara
 Mateus,32,Rio de Janeiro,RJ,João,Caio,Fernando
-Tiago,28,Brasília,DF,Aline,Lívia,Mateus
-Paulo,33,Cidade Desconhecida,RN,Tiago,Fernanda,Lucas
-Juliana,25,São Paulo,SP,Rafaela,Marcos,Sofia
+Tiago,28,Brasília,DF,Mateus,Lívia,Aline
+Paulo,33,Cidade Desconhecida,RN,Tiago,Lucas,Fernanda
+Juliana,25,São Paulo,SP,Sofia,Rafaela,Marcos
 Pedro,39,Porto Alegre,RS,
-Amanda,24,Porto Alegre,RS,Lívia,Pedro,Caio
+Amanda,24,Porto Alegre,RS,Caio,Pedro,Lívia
 Bruno,47,Brasília,DF,
 Carla,33,Juiz de Fora,MG,
-Gabriela,27,Fortaleza,CE,Aline,Rafaela,Carla
-Thiago,31,São Paulo,SP,Amanda,João,Clara,Lucas
-Renata,23,Curitiba,PR,Clara,Sofia,Fernando,Rafiki
+Gabriela,27,Fortaleza,CE,Carla,Aline,Rafaela
+Thiago,31,São Paulo,SP,João,Clara,Amanda,Lucas
+Renata,23,Curitiba,PR,Sofia,Rafiki,Clara,Fernando
 Camila,38,Manaus,,
 Felipe,27,Brasília,DF,Rafiki,Carla,Renata
 Mariana,29,,,
-Daniel,25,Rio de Janeiro,RJ,Rafiki,Camila,Paulo,Amanda
+Daniel,25,Rio de Janeiro,RJ,Camila,Rafiki,Amanda,Paulo
 Matheus,26,Petropolis,RJ,
 Larissa,30,Petropolis,RJ,
 Luís,43,Recife,PE,
