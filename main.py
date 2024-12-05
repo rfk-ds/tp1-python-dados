@@ -123,6 +123,15 @@ def verificar_popularidade(usuario):
 
 # 9. Amigos em Comum ⭐⭐
 def amigos_em_comum():
+    """
+    Seleciona aleatoriamente dois usuários e verifica se eles têm amigos em comum.
+
+    A função obtém uma lista de usuários do dicionário global e seleciona
+    aleatoriamente dois deles. Em seguida, verifica se esses usuários compartilham
+    algum amigo e exibe os amigos em comum, se houver.
+
+    Se não houver amigos em comum, uma mensagem informando isso será exibida.
+    """
     usuarios = list(usuarios_dict.keys())
     usuario1, usuario2 = random.sample(usuarios, 2)
     amigos_usuario1 = usuarios_dict[usuario1]["amigos"]
@@ -137,6 +146,16 @@ def amigos_em_comum():
 
 # 10. Conexões Exclusivas ⭐⭐
 def conexoes_exclusivas():
+    """
+    Seleciona aleatoriamente dois usuários e exibe seus amigos exclusivos.
+
+    A função escolhe aleatoriamente dois usuários do dicionário global e
+    determina quais amigos cada um deles possui que não são amigos do outro.
+    Os amigos exclusivos de cada usuário são exibidos. Se um usuário não tiver
+    amigos exclusivos, uma mensagem informando isso será exibida.
+
+    Amigos em comum são identificados e excluídos da lista de amigos de cada usuário.
+    """
     usuario1, usuario2 = random.sample(list(usuarios_dict.keys()), 2)
     amigos_usuario1 = usuarios_dict[usuario1]["amigos"]
     amigos_usuario2 = usuarios_dict[usuario2]["amigos"]
@@ -157,6 +176,17 @@ def conexoes_exclusivas():
 
 # 11. Removendo Conexões ⭐⭐
 def remover_amigo(usuario, amigo):
+    """
+    Remove um amigo da lista de amigos de um usuário.
+
+    Parâmetros:
+    usuario (str): O nome do usuário que deseja remover um amigo.
+    amigo (str): O nome do amigo a ser removido.
+
+    A função verifica se o usuário existe e se o amigo está na lista de amigos do usuário.
+    Se ambos existirem, o amigo é removido da lista de amigos do usuário e vice-versa.
+    Caso contrário, mensagens apropriadas são exibidas.
+    """
     if usuario in usuarios_dict:
         if amigo in usuarios_dict[usuario]["amigos"]:
             usuarios_dict[usuario]["amigos"].remove(amigo)
@@ -169,6 +199,16 @@ def remover_amigo(usuario, amigo):
 
 # 12. Salvando o Progresso ⭐⭐
 def salvar_progresso():
+    """
+    Salva o progresso dos usuários em um arquivo de texto.
+
+    A função grava as informações de cada usuário, incluindo nome, idade,
+    localização (latitude e longitude) e lista de amigos, em um arquivo chamado
+    'rede_INFNET_atualizado.txt'. Cada linha do arquivo contém os dados de um usuário,
+    separados por vírgulas.
+
+    O arquivo é criado ou sobrescrito se já existir.
+    """
     with open('rede_INFNET_atualizado.txt', 'w', encoding='utf-8') as file:
         for usuario, dados in usuarios_dict.items():
             amigos = ','.join(dados["amigos"])
@@ -176,11 +216,28 @@ def salvar_progresso():
 
 # 13. Listando Usuários ⭐
 def listar_usuarios():
+    """
+    Lista todos os usuários presentes no dicionário de usuários.
+
+    A função percorre o dicionário global de usuários e imprime o nome de cada usuário.
+    Não retorna nenhum valor, apenas exibe os nomes no console.
+    """
     for usuario in usuarios_dict.keys():
         print(usuario)
 
 # 14. Quantidade de Amigos ⭐⭐⭐
 def carregar_usuarios():
+    """
+    Carrega os usuários de um arquivo de texto para um dicionário.
+
+    A função lê os dados de usuários do arquivo 'rede_INFNET.txt', onde cada linha contém
+    informações sobre um usuário, incluindo nome, idade, localização (latitude e longitude)
+    e uma lista de amigos. Os dados são armazenados em um dicionário, onde a chave é o nome
+    do usuário e o valor é outro dicionário com detalhes do usuário.
+
+    Retorna:
+        dict: Um dicionário contendo os usuários e suas informações.
+    """
     usuarios_dict = {}
     with open('rede_INFNET.txt', 'r', encoding='utf-8') as file:
         for line in file:
@@ -203,6 +260,16 @@ def carregar_usuarios():
     return usuarios_dict
 
 def quantidade_amigos(usuarios_dict):
+    """
+    Exibe a quantidade de amigos de cada usuário no dicionário.
+
+    A função percorre o dicionário de usuários e imprime o número de amigos de cada um.
+    Se o usuário tiver amigos, o número é exibido. Caso contrário, é informado que o usuário
+    não possui amigos.
+
+    Parâmetros:
+        usuarios_dict (dict): O dicionário contendo os usuários e suas informações.
+    """
     for usuario, dados in usuarios_dict.items():
         amigos = dados["amigos"]
         if len(amigos) > 0:
@@ -212,6 +279,14 @@ def quantidade_amigos(usuarios_dict):
 
 # 15. Usuários Mais Populares ⭐⭐⭐
 def usuarios_mais_populares():
+    """
+    Exibe os cinco usuários mais populares com base na quantidade de amigos.
+
+    A função conta quantas vezes cada usuário é mencionado como amigo por outros usuários
+    e exibe os cinco usuários que têm o maior número de amigos. 
+
+    Utiliza a classe Counter do módulo collections para facilitar a contagem.
+    """
     contador = Counter()
     
     for dados in usuarios_dict.values():
@@ -233,6 +308,15 @@ evitando assim possíveis erros e problemas de memória.
 """
 
 def txt_para_csv():
+    """
+    Converte um arquivo de texto com dados de usuários para um formato CSV.
+
+    A função lê os dados do arquivo 'rede_INFNET_atualizado.txt', onde cada linha contém
+    informações sobre um usuário (nome, idade, cidade e estado). Os dados são extraídos e
+    salvos em um novo arquivo chamado 'INFwebNet.csv'.
+
+    O arquivo CSV resultante contém um cabeçalho com os campos 'Nome', 'Idade', 'Cidade' e 'Estado'.
+    """
     with open('rede_INFNET_atualizado.txt', 'r', encoding='utf-8') as file:
         linhas = file.readlines()
 
@@ -256,6 +340,16 @@ def txt_para_csv():
 txt_para_csv()
 
 def csv_para_json():
+    """
+    Converte um arquivo CSV com dados de usuários para um formato JSON.
+
+    A função lê os dados do arquivo 'INFwebNet.csv' usando um leitor de dicionário e
+    converte essas informações para um formato JSON, que é salvo em um novo arquivo chamado
+    'INFwebNET.json'.
+
+    O arquivo JSON resultante contém uma lista de dicionários, onde cada dicionário representa
+    um usuário e suas informações.
+    """
     with open('INFwebNet.csv', 'r', encoding='utf-8') as csvfile:
         leitor = csv.DictReader(csvfile)
         dados = [linha for linha in leitor]
@@ -268,6 +362,16 @@ def csv_para_json():
 csv_para_json()
 
 def cadastrar_usuario():
+    """
+    Cadastra um novo usuário no sistema INFNET.
+
+    A função solicita informações do usuário, incluindo nome, idade, cidade, estado,
+    hobbys, linguagens de programação e jogos. Os dados são salvos em um arquivo JSON
+    chamado 'INFwebNET.json'.
+
+    Se o arquivo não existir, ele será criado. A função também atualiza a lista de usuários
+    carregando os dados existentes após o cadastro.
+    """
     decisao = input("Deseja cadastrar um novo INFNETiano? (s/n): ")
     
     if decisao.lower() == 's':
@@ -323,12 +427,30 @@ def cadastrar_usuario():
 
 
 def calcular_media_idade():
+    """
+    Calcula e exibe a média de idade dos usuários cadastrados no sistema INFNET.
+
+    A função lê os dados do arquivo 'INFwebNET.json', calcula a média das idades
+    dos usuários e imprime o resultado. É esperado que o arquivo JSON contenha um
+    campo chamado 'Idade'.
+    """
     df = pd.read_json('INFwebNET.json')
 
     media_idade = df['Idade'].mean()
     print(f"A média de idade dos INFNETianos é: {media_idade:.0f} anos")
 
 def carregar_novos_usuarios():
+    """
+    Carrega novos usuários a partir de um arquivo de texto e os adiciona ao dicionário global de usuários.
+
+    A função lê o arquivo 'dados_usuarios_novos.txt', que deve conter informações sobre novos usuários,
+    e converte essas informações em dicionários. Os dados são armazenados em um dicionário global chamado
+    `usuarios_dict`. Cada usuário é representado por um dicionário que inclui nome, idade, localização,
+    hobbys, linguagens de programação e jogos.
+
+    O arquivo deve ter campos separados por ponto e vírgula e a função lida com possíveis erros de
+    formatação, como idades inválidas. Se o arquivo não for encontrado, uma mensagem de erro será exibida.
+    """
     try:
         with open('dados_usuarios_novos.txt', 'r', encoding='utf-8') as file:
             leitor = csv.reader(file, delimiter=';')
@@ -336,10 +458,10 @@ def carregar_novos_usuarios():
             next(leitor) 
             
             for linha in leitor:
-                if len(linha) >= 5:  # Verifica se a linha tem pelo menos 5 campos
+                if len(linha) >= 5:
                     nome = linha[1].strip() 
                     try:
-                        idade = int(float(linha[4].strip()))  # Idade está na quinta coluna
+                        idade = int(float(linha[4].strip()))
                     except ValueError:
                         print(f"Idade inválida para o usuário {nome}. Ignorando...")
                         continue
@@ -386,6 +508,21 @@ def carregar_novos_usuarios():
         print(f"Ocorreu um erro: {e}")
 
 def organizar_dados_em_dataframe():
+    """
+    Organiza os dados dos usuários em um DataFrame do Pandas.
+
+    A função coleta informações dos usuários armazenados no dicionário global `usuarios_dict`,
+    calcula o ano de nascimento com base na idade e cria um DataFrame com as seguintes colunas:
+    Nome, Idade, Cidade, Estado, Hobbys, Linguagens de Programação, Jogos e Ano de Nascimento.
+
+    A função também trata valores ausentes, preenchendo a idade média para idades ausentes e utilizando
+    a moda da coluna 'Cidade' para preencher valores vazios. O DataFrame resultante é impresso e retornado.
+    
+    Pelo menos era a intenção...
+
+    Returns:
+        pd.DataFrame: DataFrame contendo as informações organizadas dos usuários.
+    """
     dados_usuarios = []
     
     ano_atual = datetime.now().year
@@ -399,13 +536,12 @@ def organizar_dados_em_dataframe():
         coding = ', '.join(dados.get("coding", [])) or 'Nenhuma'
         jogos = ', '.join([f"{jogo['jogo']} ({jogo['plataforma']})" for jogo in dados.get("jogos", [])]) or 'Nenhum'
         
-        # Calculando o ano de nascimento
         ano_nascimento = ano_atual - idade if idade is not None else None
         
         dados_usuarios.append({
             "Nome": nome,
             "Idade": idade,
-            "Cidade": cidade if cidade else np.nan,  # Convertendo string vazia em NaN
+            "Cidade": cidade if cidade else np.nan,
             "Estado": estado,
             "Hobbys": hobbys,
             "Linguagens de Programação": coding,
@@ -450,11 +586,16 @@ def organizar_dados_em_dataframe():
     
 def salvar_grupos_por_estado(df):
     """
-    Filtra os usuários por estado e salva em arquivos CSV.
-    
+    Salva os usuários em arquivos CSV separados por estado.
+
+    A função recebe um DataFrame que contém informações dos usuários e cria arquivos CSV
+    para cada estado único presente na coluna 'Estado'. Cada arquivo contém os dados dos usuários
+    correspondentes ao estado específico.
+
     Parâmetros:
-    df : DataFrame
-        O DataFrame contendo os dados dos INFNETianos.
+        df (pd.DataFrame): DataFrame contendo os dados dos usuários, incluindo a coluna 'Estado'.
+
+    A função não retorna nenhum valor, mas imprime uma mensagem indicando que os dados foram salvos.
     """
     estados_unicos = df['Estado'].unique()
     for estado in estados_unicos:
@@ -469,6 +610,20 @@ def salvar_grupos_por_estado(df):
 
 
 def filtrar_por_ano_nascimento(df):
+    """
+    Filtra o DataFrame de usuários com base no ano de nascimento.
+
+    A função solicita ao usuário se deseja filtrar os dados por ano de nascimento. Se a resposta for 'n',
+    o DataFrame original é retornado. Caso contrário, o usuário deve inserir um ano inicial e um ano final,
+    e a função retorna um novo DataFrame contendo apenas os usuários cujo ano de nascimento está dentro
+    do intervalo especificado.
+
+    Parâmetros:
+        df (pd.DataFrame): DataFrame contendo os dados dos usuários, incluindo a coluna 'Ano de Nascimento'.
+
+    Returns:
+        pd.DataFrame: DataFrame filtrado com os usuários que atendem ao critério de ano de nascimento.
+    """
     decisao = input("Deseja filtrar por ano de nascimento? (s/n): ")
     
     if decisao.lower() == 'n':
@@ -482,6 +637,16 @@ def filtrar_por_ano_nascimento(df):
     print("\n", df_filtrado)
 
 def selecionar_infnetiano():
+    """
+    Permite ao usuário buscar e selecionar um INFNETiano pelo nome.
+
+    A função solicita ao usuário que insira o nome de um INFNETiano e busca no dicionário global
+    `usuarios_dict`. Se encontrar usuários correspondentes, exibe uma lista numerada. O usuário pode
+    então selecionar um INFNETiano pelo número correspondente. Se a seleção for válida, a função
+    chama a função `atualizar_dados` para atualizar os dados do usuário selecionado.
+
+    A função não retorna nenhum valor, mas imprime mensagens informativas sobre o processo de busca e seleção.
+    """
     nome_busca = input("Digite o nome do INFNETiano que deseja buscar: ").strip()
     
     usuarios_encontrados = [usuario for usuario in usuarios_dict.keys() if nome_busca.lower() in usuario.lower()]
@@ -499,7 +664,6 @@ def selecionar_infnetiano():
                 usuario_selecionado = usuarios_encontrados[indice]
                 print(f"Você selecionou: {usuario_selecionado}")
                 
-                # Atualizando dados
                 atualizar_dados(usuario_selecionado)
             else:
                 print("Seleção inválida. Tente novamente.")
@@ -509,6 +673,18 @@ def selecionar_infnetiano():
         print("Nenhum INFNETiano encontrado com esse nome.")
 
 def atualizar_dados(usuario):
+    """
+    Atualiza os dados de um INFNETiano.
+
+    A função permite que o usuário atualize informações pessoais de um INFNETiano, como idade,
+    localização (cidade e estado), hobbies e jogos. O usuário pode optar por manter os valores atuais
+    pressionando Enter. As atualizações são salvas no dicionário global `usuarios_dict`.
+
+    Parâmetros:
+        usuario (str): O nome do INFNETiano cujos dados serão atualizados.
+
+    A função não retorna nenhum valor, mas imprime mensagens informativas sobre o processo de atualização.
+    """
     print(f"\nAtualizando dados para: {usuario}")
     
     dados_usuario = usuarios_dict[usuario]
@@ -545,6 +721,15 @@ def atualizar_dados(usuario):
     print("Dados atualizados com sucesso!")
     
 def linguagens_mais_citadas():
+    """
+    Exibe as 5 linguagens de programação mais citadas entre os INFNETianos.
+
+    A função percorre o dicionário global `usuarios_dict`, contando a frequência das linguagens
+    de programação mencionadas na chave "coding" de cada usuário. Em seguida, exibe as 5 linguagens
+    mais populares e suas respectivas quantidades.
+
+    A função não recebe parâmetros e não retorna nenhum valor, mas imprime os resultados diretamente.
+    """
     contador = Counter()
 
     for dados in usuarios_dict.values():
@@ -561,6 +746,28 @@ def linguagens_mais_citadas():
         print("Nenhuma linguagem de programação foi citada.")
 
 def main():
+    """
+    Função principal do programa que gerencia a rede INFwebNET.
+
+    A função executa uma série de operações relacionadas ao gerenciamento de usuários na rede,
+    incluindo o carregamento de dados, cadastro de usuários, adição e remoção de amigos,
+    verificação de popularidade, cálculo de média de idade, e organização de dados em um DataFrame.
+
+    O fluxo de execução inclui:
+    - Carregar usuários existentes.
+    - Listar usuários cadastrados.
+    - Cadastrar novos usuários.
+    - Calcular a quantidade de amigos.
+    - Adicionar e remover amigos.
+    - Verificar a popularidade de usuários.
+    - Identificar amigos em comum e conexões exclusivas.
+    - Salvar o progresso em um arquivo.
+    - Organizar dados em um DataFrame e salvar em formato JSON.
+    - Filtrar dados por ano de nascimento e selecionar um INFNETiano específico.
+    - Exibir as linguagens de programação mais citadas.
+
+    A função não recebe parâmetros e não retorna valores.
+    """
     global usuarios_dict
     usuarios_dict = carregar_usuarios()
     
